@@ -1,0 +1,77 @@
+<!-- index.html -->
+    <!DOCTYPE html>
+
+    <!-- define angular app -->
+    <html>
+    <head>
+      <!-- SCROLLS -->
+      <!-- load bootstrap and fontawesome via CDN -->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"/>
+      <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.css" />
+      <style>
+        .footer {
+           position: fixed;
+           left: 0;
+           bottom: 0;
+           width: 100%;
+           text-align: center;
+           font-size: 0.8rem;
+            /* Set the fixed height of the footer here */
+           height: 60px;
+           line-height: 60px; /* Vertically center the text there */
+           background-color: #f5f5f5;
+        }
+          
+        .done-true {
+          text-decoration: line-through;
+          color: grey;
+        }
+      </style>
+
+      <!-- SPELLS -->
+      <!-- load angular via CDN -->
+      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
+      <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.js"></script>
+      <script src="app.js"></script>
+      <script src="controller.js"></script>
+    </head>
+
+    <!-- define angular controller -->
+    <body ng-controller="mainController">
+        <!-- HEADER AND NAVBAR -->
+        <header>
+            <nav class="navbar navbar-expand-sm bg-light">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="/">Angular Simple App</a>
+                </div>
+
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="nav-item"><a class="nav-link" href="#"><i class="fa fa-home"></i> Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about"><i class="fa fa-shield"></i> About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact"><i class="fa fa-comment"></i> Contact</a></li>
+                </ul>
+            </div>
+            </nav>
+        </header>
+
+        <!-- MAIN CONTENT AND INJECTED VIEWS -->
+        <div id="main" ng-app="scotchApp" style="padding-bottom:60px;">
+
+            <!-- angular templating -->
+            <!-- this is where content will be injected -->
+            <div ng-view></div>
+
+        </div>
+        
+        
+        <!-- Footer -->
+        <!-- Copyright -->
+        <div class="footer text-center text-muted">&copy; 2018 Copyright: Created by <a href="#">Peter Leonard</a>
+        </div>
+        <!-- Copyright -->
+
+          <!-- Footer -->
+        
+    </body>
+    </html>
